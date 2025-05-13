@@ -17,7 +17,6 @@ jobs:
           echo "tartanair.org" > _build/CNAME
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/dev/tartanground' }}
         with:
           publish_branch: gh-pages=preview
           github_token: ${{ secrets.GITHUB_TOKEN }}
